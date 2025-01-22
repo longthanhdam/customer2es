@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rti-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rti-app
+  template:
+    metadata:
+      labels:
+        app: rti-app
+    spec:
+      containers:
+      - name: rti-app
+        image: mmregistry.mmvietnam.com:5000/rti
+        ports:
+        - containerPort: 7003
+      imagePullSecrets:
+      - name: mmregistry-secret
