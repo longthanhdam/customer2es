@@ -18,5 +18,10 @@ spec:
         image: mmregistry.mmvietnam.com:5000/rti:v4
         ports:
         - containerPort: 7003
+        env:
+        - name: NODE_ENV
+          value: "UAT"
+        - name: SERVICE
+          value: "consumer"
       imagePullSecrets:
       - name: mmregistry-secret
