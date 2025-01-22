@@ -7,7 +7,7 @@ spec:
     app: rti-app
   ports:
   - protocol: TCP
-    port: 80
+    port: 7003
     targetPort: 7003
   type: LoadBalancer
 
