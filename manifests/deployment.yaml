@@ -22,6 +22,6 @@ spec:
         - name: NODE_ENV
           value: "UAT"
         - name: SERVICE
-          value: "producer"
+          value: "consumer"
       imagePullSecrets:
       - name: mmregistry-secret
