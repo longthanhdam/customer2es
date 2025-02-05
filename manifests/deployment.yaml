@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: customer2es-app
-  namespace: customer2es
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -25,4 +25,4 @@ spec:
         - name: SERVICE
           value: "consumer"
       imagePullSecrets:
-      - name: private-registry-secret
+      - name: mmregistry-secret
