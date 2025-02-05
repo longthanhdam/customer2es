@@ -1,27 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rti-app
-  namespace: rti
+  name: customer2es-app
+  namespace: customer2es
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: rti-app
+      app: customer2es-app
   template:
     metadata:
       labels:
-        app: rti-app
+        app: customer2es-app
     spec:
       containers:
-      - name: rti-app
-        image: mmregistry.mmvietnam.com:5000/rti:v4
+      - name: customer2es-app
+        image: mmregistry.mmvietnam.com:5000/customer2es:latest
         ports:
-        - containerPort: 7003
+        - containerPort: 7001
+        - containerPort: 7002
         env:
         - name: NODE_ENV
           value: "UAT"
         - name: SERVICE
-          value: "consumer"
+          value: "consumer,producer"
       imagePullSecrets:
       - name: mmregistry-secret

@@ -1,13 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: rti-service
-  namespace: rti  # namespace the same deployement
+  name: customer2es-service
+  namespace: customer2es  # namespace the same deployement
 spec:
   selector:
-    app: rti-app  #  Pod choose Deployment label
+    app: customer2es-app  #  Pod choose Deployment label
   ports:
     - protocol: TCP
-      port: 7003           # Port extenal
-      targetPort: 7003    # Port in container
+      port: 7001           # Port extenal
+      targetPort: 7001       # Port in container
+    - protocol: TCP
+      port: 7002           # Port extenal
+      targetPort: 7002       # Port in container
   type: LoadBalancer     # LoadBalancer provide IP address
