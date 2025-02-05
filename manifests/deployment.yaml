@@ -25,4 +25,4 @@ spec:
         - name: SERVICE
           value: "consumer"
       imagePullSecrets:
-      - name: mmregistry-secret
+      - name: private-registry-secret
