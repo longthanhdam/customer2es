@@ -22,6 +22,11 @@ spec:
         env:
         - name: NODE_ENV
           value: "UAT"
+        - name: SERVICE
+          valueFrom:
+            configMapKeyRef:
+              name: service-config
+              key: CONSUMER_SERVICE
         - name: CONSUMER_SERVICE
           valueFrom:
             configMapKeyRef:
