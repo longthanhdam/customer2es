@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: rti-service
-  namespace: default  # namespace the same deployement
+  namespace: rti  # namespace the same deployement
 spec:
   selector:
     app: rti-app  #  Pod choose Deployment label
