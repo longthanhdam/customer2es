@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: producer-container
-        image: mmregistry.mmvietnam.com:5000/producer:latest
+        image: mmregistry.mmvietnam.com:5000/customer2es:latest
         ports:
         - containerPort: 7002
         env:
