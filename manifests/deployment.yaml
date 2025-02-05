@@ -23,14 +23,14 @@ spec:
           value: "UAT"
         - name: SERVICE
           value: "consumer"
-      - name: producer-container
-        image: mmregistry.mmvietnam.com:5000/producer:latest
-        ports:
-        - containerPort: 7002
-        env:
-        - name: NODE_ENV
-          value: "PROD"
-        - name: SERVICE
-          value: "producer"
+          #- name: producer-container
+          #image: mmregistry.mmvietnam.com:5000/producer:latest
+          #ports:
+          #- containerPort: 7002
+          #env:
+          #- name: NODE_ENV
+          # value: "PROD"
+          #- name: SERVICE
+          #value: "producer"
       imagePullSecrets:
       - name: mmregistry-secret
