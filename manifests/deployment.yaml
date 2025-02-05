@@ -14,15 +14,6 @@ spec:
         app: customer2es-app
     spec:
       containers:
-              #- name: cusumer-container
-              #image: mmregistry.mmvietnam.com:5000/customer2es:latest
-              #ports:
-              #- containerPort: 7001
-              #env:
-              #- name: NODE_ENV
-              #value: "UAT"
-              #- name: SERVICE
-              #value: "consumer"
       - name: producer-container
         image: mmregistry.mmvietnam.com:5000/producer:latest
         ports:
