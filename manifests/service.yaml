@@ -10,7 +10,7 @@ spec:
     - protocol: TCP
       port: 7001           # Port extenal
       targetPort: 7001       # Port in container
-    - protocol: TCP
-      port: 7002           # Port extenal
-      targetPort: 7002       # Port in container
+      #- protocol: TCP
+      #port: 7002           # Port extenal
+      #targetPort: 7002       # Port in container
   type: LoadBalancer     # LoadBalancer provide IP address
