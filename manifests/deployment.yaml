@@ -23,6 +23,8 @@ spec:
           value: "PROD"
         - name: SERVICE
           value: "producer"
+        - name: LOG_ELK
+          value: "true"
       imagePullSecrets:
       - name: mmregistry-secret
 
